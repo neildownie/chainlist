@@ -1,6 +1,8 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.2;
 
 import "./Owned.sol";
+// import 'zeppelin-solidity/contracts/ownership/Ownable.sol';
+//import "zeppelin-solidity/contracts/examples/SampleCrowdsale.sol";
 
 contract ChainList is Owned {
   // Custom types
@@ -115,7 +117,7 @@ contract ChainList is Owned {
   }
 
   // kill the smart contract
-  function kill() onlyOwner {
+  function kill() onlyOwner public {
     selfdestruct(owner);
   }
 }

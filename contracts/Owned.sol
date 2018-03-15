@@ -1,4 +1,4 @@
-pragma solidity ^0.4.11;
+pragma solidity ^0.4.2;
 
 contract Owned {
   // State variable
@@ -11,7 +11,7 @@ contract Owned {
   }
 
   // constructor
-  function Owned() {
+  function Owned() public {
     owner = msg.sender;
   }
 }
